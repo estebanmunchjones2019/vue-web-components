@@ -1,28 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="App">
+    
+      <input 
+      placeholder="Enter your name" 
+      v-model="name">
+      
+
+      <div class="greeting">Hello {{ name }}!</div>
+
+      <search-result v-bind:name-attribute="name"></search-result>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  
+  export default {
+    data() {
+      return {
+        name: ''
+      }
   }
-}
+
+  }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.App {
+  margin-top: 30px;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+.greeting {
+  margin-top: 20px;
 }
 </style>
