@@ -13,6 +13,7 @@
 </template>
 
 <script>
+  //import our Web Component
   import './web-components/search-result.js';
   
   export default {
