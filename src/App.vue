@@ -13,16 +13,18 @@
 </template>
 
 <script>
+  import './web-components/search-result.js';
   
   export default {
+
     data() {
       return {
-        name: ''
+        name: '' 
       }
-  }
+  } 
 
   }
-</script>
+</script>   
 
 <style>
 .App {
